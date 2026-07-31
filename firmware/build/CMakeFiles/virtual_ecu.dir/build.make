@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware
+CMAKE_SOURCE_DIR = C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build
+CMAKE_BINARY_DIR = C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/virtual_ecu.dir/depend.make
@@ -72,32 +72,50 @@ CMakeFiles/virtual_ecu.dir/codegen:
 .PHONY : CMakeFiles/virtual_ecu.dir/codegen
 
 CMakeFiles/virtual_ecu.dir/src/main.c.obj: CMakeFiles/virtual_ecu.dir/flags.make
-CMakeFiles/virtual_ecu.dir/src/main.c.obj: C:/Users/amine/Desktop/Project/virtual-automotive-ecu/Firmware/src/main.c
+CMakeFiles/virtual_ecu.dir/src/main.c.obj: CMakeFiles/virtual_ecu.dir/includes_C.rsp
+CMakeFiles/virtual_ecu.dir/src/main.c.obj: C:/Users/amine/Desktop/Project/virtual-automotive-ecu/firmware/src/main.c
 CMakeFiles/virtual_ecu.dir/src/main.c.obj: CMakeFiles/virtual_ecu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/virtual_ecu.dir/src/main.c.obj"
-	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/virtual_ecu.dir/src/main.c.obj -MF CMakeFiles\virtual_ecu.dir\src\main.c.obj.d -o CMakeFiles\virtual_ecu.dir\src\main.c.obj -c C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\src\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/virtual_ecu.dir/src/main.c.obj"
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/virtual_ecu.dir/src/main.c.obj -MF CMakeFiles\virtual_ecu.dir\src\main.c.obj.d -o CMakeFiles\virtual_ecu.dir\src\main.c.obj -c C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\src\main.c
 
 CMakeFiles/virtual_ecu.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/virtual_ecu.dir/src/main.c.i"
-	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\src\main.c > CMakeFiles\virtual_ecu.dir\src\main.c.i
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\src\main.c > CMakeFiles\virtual_ecu.dir\src\main.c.i
 
 CMakeFiles/virtual_ecu.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/virtual_ecu.dir/src/main.c.s"
-	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\src\main.c -o CMakeFiles\virtual_ecu.dir\src\main.c.s
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\src\main.c -o CMakeFiles\virtual_ecu.dir\src\main.c.s
+
+CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj: CMakeFiles/virtual_ecu.dir/flags.make
+CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj: CMakeFiles/virtual_ecu.dir/includes_C.rsp
+CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj: C:/Users/amine/Desktop/Project/virtual-automotive-ecu/firmware/services/logger/logger.c
+CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj: CMakeFiles/virtual_ecu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj"
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj -MF CMakeFiles\virtual_ecu.dir\services\logger\logger.c.obj.d -o CMakeFiles\virtual_ecu.dir\services\logger\logger.c.obj -c C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\services\logger\logger.c
+
+CMakeFiles/virtual_ecu.dir/services/logger/logger.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/virtual_ecu.dir/services/logger/logger.c.i"
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\services\logger\logger.c > CMakeFiles\virtual_ecu.dir\services\logger\logger.c.i
+
+CMakeFiles/virtual_ecu.dir/services/logger/logger.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/virtual_ecu.dir/services/logger/logger.c.s"
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\services\logger\logger.c -o CMakeFiles\virtual_ecu.dir\services\logger\logger.c.s
 
 # Object files for target virtual_ecu
 virtual_ecu_OBJECTS = \
-"CMakeFiles/virtual_ecu.dir/src/main.c.obj"
+"CMakeFiles/virtual_ecu.dir/src/main.c.obj" \
+"CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj"
 
 # External object files for target virtual_ecu
 virtual_ecu_EXTERNAL_OBJECTS =
 
 virtual_ecu.exe: CMakeFiles/virtual_ecu.dir/src/main.c.obj
+virtual_ecu.exe: CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj
 virtual_ecu.exe: CMakeFiles/virtual_ecu.dir/build.make
 virtual_ecu.exe: CMakeFiles/virtual_ecu.dir/linkLibs.rsp
 virtual_ecu.exe: CMakeFiles/virtual_ecu.dir/objects1.rsp
 virtual_ecu.exe: CMakeFiles/virtual_ecu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable virtual_ecu.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable virtual_ecu.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\virtual_ecu.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +127,6 @@ CMakeFiles/virtual_ecu.dir/clean:
 .PHONY : CMakeFiles/virtual_ecu.dir/clean
 
 CMakeFiles/virtual_ecu.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build\CMakeFiles\virtual_ecu.dir\DependInfo.cmake "--color=$(COLOR)" virtual_ecu
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build\CMakeFiles\virtual_ecu.dir\DependInfo.cmake "--color=$(COLOR)" virtual_ecu
 .PHONY : CMakeFiles/virtual_ecu.dir/depend
 

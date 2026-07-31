@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj"
+  "CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj.d"
   "CMakeFiles/virtual_ecu.dir/src/main.c.obj"
   "CMakeFiles/virtual_ecu.dir/src/main.c.obj.d"
   "libvirtual_ecu.dll.a"

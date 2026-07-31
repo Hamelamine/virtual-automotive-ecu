@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware
+CMAKE_SOURCE_DIR = C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build
+CMAKE_BINARY_DIR = C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build\CMakeFiles C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build\CMakeFiles C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\amine\Desktop\Project\virtual-automotive-ecu\Firmware\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\amine\Desktop\Project\virtual-automotive-ecu\firmware\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ virtual_ecu/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\virtual_ecu.dir\build.make CMakeFiles/virtual_ecu.dir/build
 .PHONY : virtual_ecu/fast
 
+services/logger/logger.obj: services/logger/logger.c.obj
+.PHONY : services/logger/logger.obj
+
+# target to build an object file
+services/logger/logger.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\virtual_ecu.dir\build.make CMakeFiles/virtual_ecu.dir/services/logger/logger.c.obj
+.PHONY : services/logger/logger.c.obj
+
+services/logger/logger.i: services/logger/logger.c.i
+.PHONY : services/logger/logger.i
+
+# target to preprocess a source file
+services/logger/logger.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\virtual_ecu.dir\build.make CMakeFiles/virtual_ecu.dir/services/logger/logger.c.i
+.PHONY : services/logger/logger.c.i
+
+services/logger/logger.s: services/logger/logger.c.s
+.PHONY : services/logger/logger.s
+
+# target to generate assembly for a file
+services/logger/logger.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\virtual_ecu.dir\build.make CMakeFiles/virtual_ecu.dir/services/logger/logger.c.s
+.PHONY : services/logger/logger.c.s
+
 src/main.obj: src/main.c.obj
 .PHONY : src/main.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... virtual_ecu
+	@echo ... services/logger/logger.obj
+	@echo ... services/logger/logger.i
+	@echo ... services/logger/logger.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

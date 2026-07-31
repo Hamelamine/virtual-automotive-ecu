@@ -8,5 +8,13 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(
     virtual_ecu
+
     src/main.c
+    services/logger/logger.c
+)
+
+target_include_directories(
+    virtual_ecu
+    PRIVATE
+        services/logger
 )
