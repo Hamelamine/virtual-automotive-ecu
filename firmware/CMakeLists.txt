@@ -11,10 +11,19 @@ add_executable(
 
     src/main.c
     services/logger/logger.c
+    app/ecu/ecu.c
+    services/config/config.c
+    services/fault_manager/fault_manager.c
+    app/cooling/cooling.c
 )
 
 target_include_directories(
     virtual_ecu
     PRIVATE
         services/logger
+        app/ecu
+        services/config
+        services/fault_manager
+        app/cooling
+        
 )

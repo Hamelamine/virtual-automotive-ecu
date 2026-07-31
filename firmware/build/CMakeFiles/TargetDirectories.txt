@@ -1,3 +1,0 @@
-C:/Users/amine/Desktop/Project/virtual-automotive-ecu/firmware/build/CMakeFiles/virtual_ecu.dir
-C:/Users/amine/Desktop/Project/virtual-automotive-ecu/firmware/build/CMakeFiles/edit_cache.dir
-C:/Users/amine/Desktop/Project/virtual-automotive-ecu/firmware/build/CMakeFiles/rebuild_cache.dir

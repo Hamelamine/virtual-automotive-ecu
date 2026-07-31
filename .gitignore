@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
-
+# Build files
+firmware/build/
 # Object files
 *.o
 *.ko

@@ -1,0 +1,15 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define ECU_VERSION_MAJOR 1
+#define ECU_VERSION_MINOR 0
+
+#define FAN_ON_TEMPERATURE      70
+#define FAN_OFF_TEMPERATURE     65
+
+#define WARNING_TEMPERATURE     90
+#define CRITICAL_TEMPERATURE   110
+
+#define CAN_BAUDRATE          500000
+
+#endif /* CONFIG_H */
