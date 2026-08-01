@@ -3,6 +3,7 @@
 #include "fault_manager.h"
 #include "temperature_sensor.h"
 #include "cooling.h"
+#include "fan.h"
 
 void ECU_Init(void)
 {
@@ -12,6 +13,7 @@ void ECU_Init(void)
     Logger_LogInfo("Configuration Loaded");
     Cooling_Init();
     TemperatureSensor_Init();
+    Fan_Init();
 
 }
 

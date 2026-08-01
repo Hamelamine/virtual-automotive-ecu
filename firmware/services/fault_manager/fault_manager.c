@@ -11,6 +11,11 @@ void FaultManager_Init(void)
 
 void FaultManager_Report(FaultCode_t fault)
 {
+    if(currentFault == fault)
+    {
+        return;
+    }
+
     currentFault = fault;
 
     switch (fault)
@@ -32,9 +37,14 @@ void FaultManager_Report(FaultCode_t fault)
             break;
 
         default:
-            Logger_LogInfo("No Active Fault");
             break;
     }
+}
+void FaultManager_Clear(void)
+{
+    currentFault = FAULT_NONE;
+
+    Logger_LogInfo("Faults Cleared");
 }
 
 FaultCode_t FaultManager_GetCurrentFault(void)

@@ -16,6 +16,7 @@ add_executable(
     services/fault_manager/fault_manager.c
     app/cooling/cooling.c
     hal/temperature_sensor/temperature_sensor.c
+    hal/fan/fan.c
 )
 
 target_include_directories(
@@ -27,5 +28,6 @@ target_include_directories(
         services/fault_manager
         app/cooling
         hal/temperature_sensor
+        hal/fan
         
 )

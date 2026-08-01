@@ -15,6 +15,8 @@ void FaultManager_Init(void);
 
 void FaultManager_Report(FaultCode_t fault);
 
+void FaultManager_Clear(void);
+
 FaultCode_t FaultManager_GetCurrentFault(void);
 
 #endif /* FAULT_MANAGER_H */
