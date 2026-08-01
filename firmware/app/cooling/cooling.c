@@ -6,6 +6,11 @@ static int fanOn = 0;
 void Cooling_Init(void) { fanOn = 0; 
     Logger_LogInfo("Cooling Module Initialized"); } 
 void Cooling_Update(int temperature) { 
+    if(temperature < 0)
+{
+    FaultManager_Report(FAULT_SENSOR_FAILURE);
+    return;
+}
     if (temperature >= CRITICAL_TEMPERATURE) { 
         FaultManager_Report(FAULT_OVERTEMPERATURE); 
         fanOn = 1; return; } 

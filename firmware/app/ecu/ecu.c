@@ -1,6 +1,7 @@
 #include "ecu.h"
 #include "logger.h"
 #include "fault_manager.h"
+#include "temperature_sensor.h"
 #include "cooling.h"
 
 void ECU_Init(void)
@@ -10,15 +11,19 @@ void ECU_Init(void)
     FaultManager_Init();
     Logger_LogInfo("Configuration Loaded");
     Cooling_Init();
+    TemperatureSensor_Init();
 
 }
 
 void ECU_Start(void)
 {
     Logger_LogInfo("ECU Started");
-    int temperatures[] = {60, 68, 71, 75, 69, 64, 112}; 
-    for (int i = 0; i < 7; i++) { 
-        Cooling_Update(temperatures[i]); }
+    for(int i = 0; i < 20; i++)
+    {
+    int temperature = TemperatureSensor_Read();
+
+    Cooling_Update(temperature);
+    }
 
 }
 
