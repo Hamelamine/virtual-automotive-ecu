@@ -17,6 +17,8 @@ add_executable(
     app/cooling/cooling.c
     hal/temperature_sensor/temperature_sensor.c
     hal/fan/fan.c
+    drivers/can/can.c
+    hal/system/system.c
 )
 
 target_include_directories(
@@ -29,5 +31,7 @@ target_include_directories(
         app/cooling
         hal/temperature_sensor
         hal/fan
+        drivers/can
+        hal/system
         
 )
