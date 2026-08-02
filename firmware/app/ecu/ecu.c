@@ -6,6 +6,8 @@
 #include "fan.h"
 #include "can.h"
 #include "system.h"
+#include "socket_server.h"
+#include <stdio.h>
 
 void ECU_Init(void)
 {
@@ -17,6 +19,7 @@ void ECU_Init(void)
     TemperatureSensor_Init();
     Fan_Init();
     CAN_Init();
+    SocketServer_Init();
 
 }
 
@@ -25,7 +28,7 @@ void ECU_Start(void)
     Logger_LogInfo("ECU Started");
     int temperature;
 
-for(int i = 0; i < 100; i++)
+while(1)
 {
     temperature = TemperatureSensor_Read();
 
@@ -40,6 +43,19 @@ for(int i = 0; i < 100; i++)
     frame.data[2] = FaultManager_GetCurrentFault();
 
     CAN_Send(&frame);
+
+    // Send data to Python Dashboard
+    char message[64];
+
+    sprintf(
+        message,
+        "%d,%d,%d\n",
+        temperature,
+        Fan_GetSpeed(),
+        FaultManager_GetCurrentFault()
+    );
+
+    SocketServer_Send(message);
 
     System_DelayMs(100);
 }

@@ -19,6 +19,7 @@ add_executable(
     hal/fan/fan.c
     drivers/can/can.c
     hal/system/system.c
+    communication/socket_server.c
 )
 
 target_include_directories(
@@ -33,5 +34,9 @@ target_include_directories(
         hal/fan
         drivers/can
         hal/system
+        communication
         
 )
+if(WIN32)
+    target_link_libraries(virtual_ecu ws2_32)
+endif()
